@@ -1,14 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Interactive psychopharmacology learning system for medical students, psychiatry residents, and primary care clinicians." />
-    <title>Psychopharm Master - Interactive Psychopharmacology Education</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Psychopharm Master — Interactive Psychopharmacology</title>
+    <meta name="description" content="Evidence-based, interactive psychopharmacology: 85 drugs, interaction checker, switching planner, emergency recognizer, clinical calculators, cases, flashcards and a 97-question bank. Updated November 2026." />
+    <meta name="theme-color" content="#0b1220" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta property="og:title" content="Psychopharm Master" />
+    <meta property="og:description" content="Master psychopharmacology by doing it — tools, cases and spaced repetition, all sourced." />
+    <script>
+      try {
+        var s = JSON.parse(localStorage.getItem('psychopharm-progress') || '{}');
+        var t = (s.state && s.state.theme) || 'dark';
+        document.documentElement.classList.toggle('dark', t === 'dark');
+        document.documentElement.style.colorScheme = t;
+      } catch (e) {}
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>Psychopharm Master requires JavaScript.</noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
